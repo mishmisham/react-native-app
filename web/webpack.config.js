@@ -59,14 +59,14 @@ const fileLoaderConfiguration = {
   ],
 };
 
-const sassLoaderConfiguration = {
-  test: /\.s[ac]ss$/i,
-  use: [
-    "style-loader",
-    "css-loader",
-    "sass-loader",
-  ],
-}
+// const sassLoaderConfiguration = {
+//   test: /\.s[ac]ss$/i,
+//   use: [
+//     "style-loader",
+//     "css-loader",
+//     "sass-loader",
+//   ],
+// }
 
 module.exports = argv => {
   return {
@@ -89,12 +89,17 @@ module.exports = argv => {
         '.web.tsx',
         '.tsx',
       ],
+      alias: {
+        '@': path.resolve(appDirectory, 'src/'),
+        '@/components': path.resolve(appDirectory, 'src/components/'),
+      },
     },
     module: {
       rules: [
         babelLoaderConfiguration,
         imageLoaderConfiguration,
         fileLoaderConfiguration,
+        // sassLoaderConfiguration,
       ],
     },
     plugins: [

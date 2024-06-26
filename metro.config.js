@@ -1,7 +1,7 @@
 const { getDefaultConfig, mergeConfig } = require("@react-native/metro-config");
 
 const defaultConfig = getDefaultConfig(__dirname);
-const { assetExts, sourceExts } = defaultConfig.resolver;
+// const { assetExts, sourceExts } = defaultConfig.resolver;
 
 /**
  * Metro configuration
@@ -14,7 +14,7 @@ const config = {
     babelTransformerPath: require.resolve("./transformer.js")
   },
   resolver: {
-    sourceExts: [...sourceExts, "scss", "sass"]
+    // sourceExts: [...sourceExts, "scss", "sass"]
   }
 };
 

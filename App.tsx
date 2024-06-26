@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import styles from "./AppStyle.scss";
+import {styles} from "./AppStyle";
 
 const App = () => {
   return (
